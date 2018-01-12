@@ -1,0 +1,62 @@
+html {
+  background-image: linear-gradient(45deg, #88f, #dfd);
+  font: 16px sans-serif;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+}
+
+canvas {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+  will-change: transform;
+}
+
+canvas[data-action] {
+  transition: 200ms ease-in-out transform;
+}
+
+canvas[data-action="up"] {
+  transform: translateY(1.75%);
+}
+
+canvas[data-action="down"] {
+  transform: translateY(-1.75%);
+}
+
+canvas[data-action="left"] {
+  transform: translateX(1.75%);
+}
+
+canvas[data-action="right"] {
+  transform: translateX(-1.75%);
+}
+
+canvas[data-action="in"] {
+  transform: scale(2);
+}
+
+canvas[data-action="out"] {
+  transform: scale(.5);
+}
+
+body.touch div {
+  bottom: 0;
+  display: flex;
+  left: 0;
+  position: fixed;
+  right: 0;
+}
+
+button {
+  background-color: #0008;
+  border: 0;
+  border-radius: 0;
+  color: #fff;
+  flex-grow: 1;
+  font: inherit;
+  padding: 2rem 1rem;
+}
